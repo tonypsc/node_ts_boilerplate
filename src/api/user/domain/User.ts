@@ -1,11 +1,13 @@
 import { UserName } from './UserName';
 import { UserId } from './UserId';
+import { AggregateRoot } from '../../shared/domain/AggregateRoot';
 
-export class User {
+export class User extends AggregateRoot {
 	private _userId: UserId;
 	private _userName: UserName;
 
 	constructor(userId: UserId, userName: UserName) {
+		super();
 		this._userId = userId;
 		this._userName = userName;
 	}
