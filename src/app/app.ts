@@ -1,7 +1,7 @@
 import express from 'express';
 import logger from 'morgan';
-import routes from './app/routes';
-import { error404Handler, errorHandler } from './app/middleware/index';
+import routes from './routes';
+import { error404Handler, errorHandler } from './middleware/index';
 import cors from 'cors';
 //const path = require('path');
 
