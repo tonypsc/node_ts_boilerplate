@@ -3,9 +3,9 @@ import { Request, Response } from 'express';
 const NOT_FOUND = 404;
 const SERVER_ERROR = 500;
 
-export function error404Handler(req: Request, res: Response, next: any) {
-	//next(createError(NOT_FOUND));
-	res.status(404).send('Not found');
+export function error404Handler(req: Request, res: Response, next: Function) {
+	next(createError(NOT_FOUND));
+	//res.status(404).send('Not found');
 }
 
 export function errorHandler(err: any, req: Request, res: Response) {
